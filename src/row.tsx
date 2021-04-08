@@ -1,12 +1,14 @@
 import { FC, useEffect, useState } from "react";
+import "./Row.css";
 import instance from "./axios";
 
 interface IRow {
   title: string;
   fetchUrl: string;
+  isLargeRow?: boolean;
 }
 
-const Row: FC<IRow> = ({ title, fetchUrl }) => {
+const Row: FC<IRow> = ({ title, fetchUrl, isLargeRow }) => {
   const [movies, setMovies] = useState<any>([]);
   const base_url = "https://image.tmdb.org/t/p/original/";
 
@@ -22,16 +24,19 @@ const Row: FC<IRow> = ({ title, fetchUrl }) => {
   return (
     <div className="row">
       <h2>{title}</h2>
-      <div className="row__posters">
+      <div className={"row__posters"}>
         {movies.map((movie: any) => {
           return (
-            <span>
+            <>
               <img
-                className="row__poster"
-                src={`${base_url}${movie.poster_path}`}
+                key={movie.id}
+                className={`row__poster  ${isLargeRow && "row__posterLarge"}`}
+                src={`${base_url}${
+                  isLargeRow ? movie.poster_path : movie.backdrop_path
+                }`}
                 alt={movie.name}
               />
-            </span>
+            </>
           );
         })}
       </div>
