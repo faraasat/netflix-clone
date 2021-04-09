@@ -27,16 +27,14 @@ const Row: FC<IRow> = ({ title, fetchUrl, isLargeRow }) => {
       <div className={"row__posters"}>
         {movies.map((movie: any) => {
           return (
-            <>
-              <img
-                key={movie.id}
-                className={`row__poster  ${isLargeRow && "row__posterLarge"}`}
-                src={`${base_url}${
-                  isLargeRow ? movie.poster_path : movie.backdrop_path
-                }`}
-                alt={movie.name}
-              />
-            </>
+            <img
+              key={movie.id}
+              className={`row__poster  ${isLargeRow && "row__posterLarge"}`}
+              src={`${base_url}${
+                isLargeRow ? movie.poster_path : movie.backdrop_path
+              }`}
+              alt={movie.name}
+            />
           );
         })}
       </div>
