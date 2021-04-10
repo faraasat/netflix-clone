@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Nav.css";
+import AvatarImg from "./assets/avatar.jpg";
 
 const Navbar = () => {
   const [show, handleShow] = useState(false);
@@ -24,11 +25,7 @@ const Navbar = () => {
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png"
         alt="Netflix Logo"
       />
-      <img
-        className="nav__avatar"
-        src="./assets/avatar.jpg"
-        alt="Netflix Logo"
-      />
+      <img className="nav__avatar" src={AvatarImg} alt="Netflix Logo" />
     </div>
   );
 };
