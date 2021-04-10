@@ -26,7 +26,7 @@ const Navbar = () => {
       />
       <img
         className="nav__avatar"
-        src="https://pbs.twimg.com/profile_images/124011999041155"
+        src="./assets/avatar.jpg"
         alt="Netflix Logo"
       />
     </div>
