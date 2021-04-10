@@ -3,7 +3,7 @@
 
 ### ⚒ Project Demo:
 ####  For Project Demo Follow the Link For: 
-#### Taskbox Site: https://netlify-react-clone.netlify.app/
+#### https://netlify-react-clone.netlify.app/
 
 ### 🕵️‍♂️ Project Details:
 ####  This project is based on primarily on React TypeScript as well as uses other libraries too. In this app, you can view Netflix UI!
